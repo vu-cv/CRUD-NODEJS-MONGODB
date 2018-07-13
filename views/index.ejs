@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="container">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>id</th>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Address</th>
+							<th>Create Time</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% data.forEach((user, index) => { %>
+						<tr>
+							<td><%= index+1 %></td>
+							<td><%= user._id %></td>
+							<td><%= user.name %></td>
+							<td><%= user.age %></td>
+							<td><%= user.address %></td>
+							<td><%= user.create_at %></td>
+							<td>
+								<a href="<%= user._id %>/edit" class="btn btn-info btn-xs">Edit</a>
+								<a onclick="return confirm('Bạn chắc chắn xóa?')" href="<%= user._id %>/delete" class="btn btn-danger btn-xs">Delete</a>
+							</td>
+						</tr>
+						<% }); %>
+					</tbody>
+				</table>
+
+				<a href="add" class="btn btn-primary">Add User</a>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

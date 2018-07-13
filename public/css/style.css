@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+input.ng-valid {
+	background: green;
+	color: #fff;
+}
+input.ng-empty {
+	background: #fff;
+}
+
