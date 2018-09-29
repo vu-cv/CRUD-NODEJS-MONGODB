@@ -1,6 +1,3 @@
-# CRUD-NODEJS-MONGODB
-CRUD, nodejs, ejs, mongoDB, express
-
--- database name: CRUD
-
--- collection: Users
+# CRUD NODEJS MONGODB
+- database name: CRUD
+- collection: Users
